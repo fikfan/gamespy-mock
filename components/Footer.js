@@ -1,7 +1,14 @@
 export default function Footer() {
     return (
-        <footer className="text-center fixed bottom-0 w-full">
-            <p className="text-center">Footer Stuff</p>
+        <footer className="mt-16 mb-12">
+            <div className="flex items-center justify-between border-t border-black pt-3">
+                <div>
+                    copyright logo
+                </div>
+                <div>
+                    some stuff
+                </div>
+            </div>
         </footer>
     )
 }

@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'font.css';
+@import 'hero.css';
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -18,7 +20,15 @@
 }
 
 body {
+  font-family: 'NeueMontreal-Regular', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: white;
+  min-height: 100vh;
   padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  min-height: 100vh;
 }
