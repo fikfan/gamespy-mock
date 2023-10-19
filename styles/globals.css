@@ -21,7 +21,7 @@
 
 body {
   font-family: 'NeueMontreal-Regular', sans-serif;
-  color: rgb(var(--foreground-rgb));
+  color: var(--primary);
   background: white;
   min-height: 100vh;
   padding: 0 30px;
