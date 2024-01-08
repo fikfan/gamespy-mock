@@ -1,34 +1,41 @@
+
 export default function Clients() {
+
     const clients = [
         {
-            name:'Client 1',
-            logo: '/src/images/1.svg',
+            name: 'Client 1',
+            logo: require('../public/images/1.svg').default,
         },
         {
-            name:'Client 2',
-            logo: '/src/images/2.svg',
+            name: 'Client 2',
+            logo: require('../public/images/2.svg').default,
         },
         {
-            name:'Client 3',
-            logo: '/src/images/3.svg',
+            name: 'Client 3',
+            logo: require('../public/images/3.svg').default,
         },
         {
-            name:'Client 4',
-            logo: '/src/images/4.svg',
+            name: 'Client 4',
+            logo: require('../public/images/4.svg').default,
         },
         {
-            name:'Client 5',
-            logo: '/src/images/5.svg',
+            name: 'Client 1',
+            logo: require('../public/images/1.svg').default,
         },
         {
-            name:'Client 6',
-            logo: '/src/images/6.svg',
+            name: 'Client 2',
+            logo: require('../public/images/2.svg').default,
         },
         {
-            name:'Client 7',
-            logo: '/src/images/7.svg',
+            name: 'Client 3',
+            logo: require('../public/images/3.svg').default,
         },
-    ]; // Array of client data
+        {
+            name: 'Client 4',
+            logo: require('../public/images/4.svg').default,
+        },
+        // ...and so on for all your clients
+    ];
 
     return (
         <section>
@@ -37,11 +44,10 @@ export default function Clients() {
                 <a className="self-end text-2xl">View all</a>
             </div>
 
-            <div className="grid grid-cols-4 gap-5 mt-8">
+            <div className="grid grid-cols-4 gap-8 mt-8 relative">
                 {clients.map((client) => (
-                    <div key={client} className="border-solid border border-black rounded">
-                        <a className="p-5">{client.name}</a>
-                        <img src={client.logo} alt={client.name} />
+                    <div key={client.id} className="border-solid border border-black rounded min-h-[150px] hover:bg-slate-300 transition ease-in-out">
+                        <img src={client.logo.src} alt={client.name} className="m-auto h-full brightness-0" style={{maxWidth: 40 + '%'}} />
                     </div>
                 ))}
             </div>

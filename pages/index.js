@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-screen-2xl m-auto">
 
       <Head>
         <title>Gamespy</title>
